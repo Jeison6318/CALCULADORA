@@ -1,31 +1,31 @@
 import tkinter as tk
 from tkinter import simpledialog
 
-def suma(a, b):
+def Suma(a, b):
     return a + b
 
-def resta(a, b):
+def Resta(a, b):
     return a - b
 
-def multiplicacion(a, b):
+def Multiplicacion(a, b):
     return a * b
 
-def division(a, b):
+def Division(a, b):
     return a / b
 
 def calcular():
-    operacion = simpledialog.askstring("Input", "¿Qué operación deseas realizar? (suma, resta, multiplicacion, division)")
+    operacion = simpledialog.askstring("Input", "¿Qué operación deseas realizar? (Suma, Resta, Multiplicacion, Division)")
     a = float(simpledialog.askstring("Input", "Ingresa el primer número:"))
     b = float(simpledialog.askstring("Input", "Ingresa el segundo número:"))
 
-    if operacion == "suma":
-        resultado = suma(a, b)
-    elif operacion == "resta":
-        resultado = resta(a, b)
-    elif operacion == "multiplicacion":
-        resultado = multiplicacion(a, b)
-    elif operacion == "division":
-        resultado = division(a, b)
+    if operacion == "Suma":
+        resultado = Suma(a, b)
+    elif operacion == "Resta":
+        resultado = Resta(a, b)
+    elif operacion == "Multiplicacion":
+        resultado = Multiplicacion(a, b)
+    elif operacion == "Division":
+        resultado = Division(a, b)
     else:
         resultado = "Operación no válida"
 
