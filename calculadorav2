@@ -1,31 +1,31 @@
 import tkinter as tk
 from tkinter import simpledialog
 
-def Suma(a, b):
+def suma(a, b):
     return a + b
 
-def Resta(a, b):
+def resta(a, b):
     return a - b
 
-def Multiplicacion(a, b):
+def multiplicacion(a, b):
     return a * b
 
-def Division(a, b):
+def division(a, b):
     return a / b
 
 def calcular():
-    operacion = simpledialog.askstring("Input", "¿Qué operación deseas realizar? (Suma, Resta, Multiplicacion, Division)")
+    operacion = simpledialog.askstring("Input", "¿Qué operación deseas realizar? (suma, resta, multiplicacion, division)")
     a = float(simpledialog.askstring("Input", "Ingresa el primer número:"))
     b = float(simpledialog.askstring("Input", "Ingresa el segundo número:"))
 
-    if operacion == "Suma":
-        resultado = Suma(a, b)
-    elif operacion == "Resta":
-        resultado = Resta(a, b)
-    elif operacion == "Multiplicacion":
-        resultado = Multiplicacion(a, b)
-    elif operacion == "Division":
-        resultado = Division(a, b)
+    if operacion == "suma":
+        resultado = suma(a, b)
+    elif operacion == "resta":
+        resultado = resta(a, b)
+    elif operacion == "multiplicacion":
+        resultado = multiplicacion(a, b)
+    elif operacion == "division":
+        resultado = division(a, b)
     else:
         resultado = "Operación no válida"
 
@@ -35,12 +35,16 @@ def calcular():
 root = tk.Tk()
 root.title("Calculadora")
 
+# Crear una etiqueta de bienvenida con estilo
+bienvenida_label = tk.Label(root, text="Bienvenidos a la calculadora", font=("Helvetica", 16, "bold"), fg="blue")
+bienvenida_label.pack(pady=20)
+
 # Crear un botón para iniciar la calculadora
-calcular_button = tk.Button(root, text="Calcular", command=calcular)
+calcular_button = tk.Button(root, text="Calcular", command=calcular, font=("Helvetica", 14, "bold"), bg="lightblue")
 calcular_button.pack(pady=20)
 
 # Crear una etiqueta para mostrar el resultado
-resultado_label = tk.Label(root, text="Resultado: ")
+resultado_label = tk.Label(root, text="Resultado: ", font=("Helvetica", 14, "bold"), fg="green")
 resultado_label.pack(pady=20)
 
 # Ejecutar la aplicación
